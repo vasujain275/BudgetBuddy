@@ -2,7 +2,7 @@ import { sql } from "drizzle-orm";
 import { createId } from "@paralleldrive/cuid2";
 import { text, sqliteTable, real } from "drizzle-orm/sqlite-core";
 
-export const users = sqliteTable("users", {
+export const usersTable = sqliteTable("users", {
   id: text("id")
     .primaryKey()
     .$defaultFn(() => createId()),
@@ -13,7 +13,5 @@ export const users = sqliteTable("users", {
   password: text("password"),
   balance: real("balance").default(0),
   budget: real("budget").default(0),
-  create_at: text("timestamp")
-    .notNull()
-    .default(sql`(current_timestamp)`),
+  created_at: text("timestamp").default(sql`(current_timestamp)`),
 });
