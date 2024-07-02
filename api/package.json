@@ -12,8 +12,8 @@
     "format": "pnpm exec prettier . --write",
     "lint": "pnpm exec eslint --fix .",
     "serve": "node dist/app.js",
-    "generate": "drizzle-kit generate",
-    "migrate": "drizzle-kit migrate"
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate"
   },
   "author": "Vasu Jain",
   "devDependencies": {
