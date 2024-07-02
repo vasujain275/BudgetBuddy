@@ -12,8 +12,9 @@
     "format": "pnpm exec prettier . --write",
     "lint": "pnpm exec eslint --fix .",
     "serve": "node dist/app.js",
-    "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate",
+    "db:generate": "drizzle-kit generate sqlite",
+    "db:migrate": "drizzle-kit migrate sqlite",
+    "studio": "drizzle-kit studio",
     "prepare": "cd .. && husky api/.husky"
   },
   "author": "Vasu Jain",

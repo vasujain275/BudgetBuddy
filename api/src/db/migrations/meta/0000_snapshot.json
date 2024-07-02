@@ -1,7 +1,7 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "56fb86ba-386d-4aa5-b829-cd95fd5ae345",
+  "id": "e98e625e-cdf0-4e04-8542-33bc4229c6e4",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "categories": {
@@ -38,8 +38,8 @@
     "transactionCategory": {
       "name": "transactionCategory",
       "columns": {
-        "transactionid": {
-          "name": "transactionid",
+        "transactionId": {
+          "name": "transactionId",
           "type": "text",
           "primaryKey": false,
           "notNull": false,
@@ -55,12 +55,12 @@
       },
       "indexes": {},
       "foreignKeys": {
-        "transactionCategory_transactionid_transactions_id_fk": {
-          "name": "transactionCategory_transactionid_transactions_id_fk",
+        "transactionCategory_transactionId_transactions_id_fk": {
+          "name": "transactionCategory_transactionId_transactions_id_fk",
           "tableFrom": "transactionCategory",
           "tableTo": "transactions",
           "columnsFrom": [
-            "transactionid"
+            "transactionId"
           ],
           "columnsTo": [
             "id"
@@ -83,12 +83,12 @@
         }
       },
       "compositePrimaryKeys": {
-        "transactionCategory_categoryId_transactionid_pk": {
+        "transactionCategory_categoryId_transactionId_pk": {
           "columns": [
             "categoryId",
-            "transactionid"
+            "transactionId"
           ],
-          "name": "transactionCategory_categoryId_transactionid_pk"
+          "name": "transactionCategory_categoryId_transactionId_pk"
         }
       },
       "uniqueConstraints": {}

@@ -12,7 +12,7 @@ export const categoriesTable = sqliteTable("categories", {
 export const transactionCateogryTable = sqliteTable(
   "transactionCategory",
   {
-    transactionId: text("transactionid").references(() => transactionsTable.id),
+    transactionId: text("transactionId").references(() => transactionsTable.id),
     categoryId: text("categoryId").references(() => categoriesTable.id),
   },
   (table) => {

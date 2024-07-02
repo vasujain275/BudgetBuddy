@@ -4,10 +4,10 @@ CREATE TABLE `categories` (
 );
 --> statement-breakpoint
 CREATE TABLE `transactionCategory` (
-	`transactionid` text,
+	`transactionId` text,
 	`categoryId` text,
-	PRIMARY KEY(`categoryId`, `transactionid`),
-	FOREIGN KEY (`transactionid`) REFERENCES `transactions`(`id`) ON UPDATE no action ON DELETE no action,
+	PRIMARY KEY(`categoryId`, `transactionId`),
+	FOREIGN KEY (`transactionId`) REFERENCES `transactions`(`id`) ON UPDATE no action ON DELETE no action,
 	FOREIGN KEY (`categoryId`) REFERENCES `categories`(`id`) ON UPDATE no action ON DELETE no action
 );
 --> statement-breakpoint
