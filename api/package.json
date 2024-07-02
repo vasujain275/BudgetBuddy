@@ -13,7 +13,8 @@
     "lint": "pnpm exec eslint --fix .",
     "serve": "node dist/app.js",
     "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate"
+    "db:migrate": "drizzle-kit migrate",
+    "prepare": "husky"
   },
   "author": "Vasu Jain",
   "devDependencies": {
@@ -25,6 +26,7 @@
     "drizzle-kit": "^0.22.8",
     "eslint": "^9.6.0",
     "globals": "^15.8.0",
+    "husky": "^9.0.11",
     "nodemon": "^3.1.4",
     "pino-pretty": "^11.2.1",
     "prettier": "^3.3.2",
