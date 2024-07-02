@@ -8,6 +8,9 @@ BudgetBuddy is a comprehensive web application designed to help users manage the
 
 #### Backend (Fastify, TypeScript, Drizzle, SQLite)
 
+![image](https://github.com/vasujain275/BudgetBuddy/assets/69643310/4d05ed40-8475-41bf-adbe-4a80f4eae1ef)
+
+
 1. **User Authentication**
 
    - Sign Up: Users can sign up with email and password.
