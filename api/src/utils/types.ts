@@ -10,4 +10,5 @@ export interface createdUser {
   id: string | null;
   username: string | null;
   email: string | null;
+  password: string | null;
 }

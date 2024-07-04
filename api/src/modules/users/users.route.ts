@@ -1,5 +1,5 @@
 import { FastifyInstance } from "fastify";
-import { createUserHandler } from "./users.controller";
+import { createUserHandler, loginUserHandler } from "./users.controller";
 import { $ref } from "./users.schema";
 
 export async function usersRoutes(server: FastifyInstance) {
@@ -11,5 +11,14 @@ export async function usersRoutes(server: FastifyInstance) {
       },
     },
     createUserHandler
+  );
+  server.post(
+    "/login",
+    {
+      schema: {
+        body: $ref("loginUsersSchema"),
+      },
+    },
+    loginUserHandler
   );
 }

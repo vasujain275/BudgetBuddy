@@ -8,7 +8,7 @@ export const hashPassword = async (password: string) => {
 export const verifyPassword = async (
   hashedPassword: string,
   passowrd: string
-) => {
+): Promise<boolean> => {
   if (await argon2.verify(hashedPassword, passowrd)) {
     return true;
   } else {

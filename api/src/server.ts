@@ -22,6 +22,7 @@ export function buildserver() {
     secret: JWT_SECRET_KEY,
   });
 
+  // We use this so that we don't have to
   server.addHook(
     "preHandler",
     (req: FastifyRequest, reply: FastifyReply, next) => {
