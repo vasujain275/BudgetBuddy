@@ -13,5 +13,6 @@ export const usersTable = sqliteTable("users", {
   password: text("password"),
   balance: real("balance").default(0),
   budget: real("budget").default(0),
+  refreshToken: text("refreshToken"),
   created_at: text("timestamp").default(sql`(current_timestamp)`),
 });
