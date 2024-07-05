@@ -6,9 +6,15 @@ declare module "fastify" {
   }
 }
 
-export interface createdUser {
+export type userPayload = {
   id: string | null;
   username: string | null;
   email: string | null;
   password: string | null;
+};
+
+declare module "@fastify/jwt" {
+  interface FastifyJWT {
+    user: userPayload;
+  }
 }
