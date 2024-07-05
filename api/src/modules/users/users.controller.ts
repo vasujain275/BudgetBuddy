@@ -97,7 +97,7 @@ async function loginUserHandler(
       secure: true,
     });
 
-    return reply.code(201).send({
+    return reply.code(200).send({
       message: "User logged in Succesfully!",
     });
   } catch (e) {
@@ -108,4 +108,14 @@ async function loginUserHandler(
   }
 }
 
-export { createUserHandler, loginUserHandler };
+async function logoutUserHandler(request: FastifyRequest, reply: FastifyReply) {
+  reply.clearCookie("accessToken");
+  reply.clearCookie("refreshToken");
+  return reply.send({ message: "Logout successful" });
+}
+
+async function verifyUser(request: FastifyRequest, reply: FastifyReply) {
+  return reply.send(request.user);
+}
+
+export { createUserHandler, loginUserHandler, logoutUserHandler, verifyUser };

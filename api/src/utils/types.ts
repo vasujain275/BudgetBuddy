@@ -4,6 +4,9 @@ declare module "fastify" {
   interface FastifyRequest {
     jwt: JWT;
   }
+  export interface FastifyInstance {
+    auth: any;
+  }
 }
 
 export type userPayload = {
