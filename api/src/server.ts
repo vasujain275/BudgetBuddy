@@ -1,6 +1,7 @@
 import Fastify, { FastifyReply, FastifyRequest } from "fastify";
 import fjwt from "@fastify/jwt";
 import fcookie from "@fastify/cookie";
+import cors from "@fastify/cors";
 import { userSchemas } from "./modules/users/users.schema";
 import { usersRoutes } from "./modules/users/users.route";
 import { COOKIE_SECRET_KEY, JWT_SECRET_KEY } from "./utils/constants";
@@ -12,6 +13,10 @@ export function buildserver() {
         target: "pino-pretty",
       },
     },
+  });
+
+  server.register(cors, {
+    origin: "*",
   });
 
   for (const schema of [...userSchemas]) {
