@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const loginFormSchema = z.object({
+export const registerFormSchema = z.object({
   username: z
     .string({
       required_error: "Username is required",
@@ -20,4 +20,4 @@ export const loginFormSchema = z.object({
   //.regex(/[0-9]/, { message: "Password must contain at least one number" })
 });
 
-export type LoginFormSchema = typeof loginFormSchema;
+export type RegisterFormSchema = typeof registerFormSchema;

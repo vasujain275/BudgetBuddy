@@ -1,14 +1,14 @@
 <script lang="ts">
   import * as Form from "$lib/components/ui/form";
   import { Input } from "$lib/components/ui/input";
-  import { loginFormSchema, type LoginFormSchema } from "./schema";
+  import { registerFormSchema, type RegisterFormSchema } from "./schema";
   import { type SuperValidated, type Infer, superForm } from "sveltekit-superforms";
   import { zodClient } from "sveltekit-superforms/adapters";
 
-  export let data: SuperValidated<Infer<LoginFormSchema>>;
+  export let data: SuperValidated<Infer<RegisterFormSchema>>;
 
   const form = superForm(data, {
-    validators: zodClient(loginFormSchema)
+    validators: zodClient(registerFormSchema)
   });
 
   const { form: formData, enhance } = form;
